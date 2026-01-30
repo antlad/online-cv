@@ -1,0 +1,20 @@
+{{ define "main" }}
+  {{ range sort (where .Site.RegularPages "Section" "sections") "Weight" }}
+    <section id="{{ .Params.section_id }}" class="section">
+      <h2>{{ .Title }}</h2>
+      {{ if eq .Params.section_id "experience" }}
+        {{ partial "experience.html" . }}
+      {{ else if eq .Params.section_id "skills" }}
+        {{ partial "skills.html" . }}
+      {{ else if eq .Params.section_id "projects" }}
+        {{ partial "projects.html" . }}
+      {{ else if eq .Params.section_id "education" }}
+        {{ partial "education.html" . }}
+      {{ else }}
+        <div class="content">
+          {{ .Content }}
+        </div>
+      {{ end }}
+    </section>
+  {{ end }}
+{{ end }}
