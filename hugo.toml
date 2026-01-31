@@ -2,10 +2,13 @@ baseURL = "https://troinich.pro/"
 languageCode = "en-us"
 title = "Vladislav Troinich"
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
-  description = "Vladislav Troinich - Lead Software Engineer / Contractor"
+  description = "Vladislav Troinich - Lead Software Engineer"
   name = "Vladislav Troinich"
-  tagline = "Lead Software Engineer / Contractor"
+  tagline = "Lead Software Engineer"
   avatar = "/images/profile.png"
   banner = "/images/1666591946603.jpeg"
 
